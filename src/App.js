@@ -1,16 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+const todos = ["Go to market", "Buy food", "Make dinner"];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          TODO LIST
-        </p>
-        
-      </header>
+      <ul>
+        {todos.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
