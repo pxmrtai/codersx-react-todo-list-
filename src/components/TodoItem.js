@@ -6,9 +6,9 @@ import "./TodoItem.css";
 import checkImg from "../img/check.svg";
 import unCheckImg from "../img/uncheck.svg";
 
-class TodoItem extends Component {
-  render() {
-    const { item, onClick } = this.props;
+function TodoItem (props)  {
+
+    const { item, onClick } = props;
     let url = unCheckImg;
     if (item.isComplete) {
       url = checkImg;
@@ -26,7 +26,7 @@ class TodoItem extends Component {
       </div>
     );
   }
-}
+
 
 TodoItem.propTypes={
   item: PropTypes.shape({
